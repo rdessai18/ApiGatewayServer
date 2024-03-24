@@ -11,6 +11,7 @@
     <groupId>com.scaler.project</groupId>
     <artifactId>ApiGatewayServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>ApiGatewayServer</name>
     <description>ApiGatewayServer</description>
     <properties>
@@ -81,6 +82,17 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <!-- Docker Image Plugin-->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <to>
+                        <image>rjtdessai18/api-gateway-server:${project.version}</image>
+                    </to>
                 </configuration>
             </plugin>
         </plugins>
