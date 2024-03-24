@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: ApiGatewayServer
+  config:
+    import: configserver:http://localhost:8888/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  info:
+    env:
+      enabled: true
+
